@@ -1,0 +1,15 @@
+@media (max-width: 1024px) {
+  .container-box {
+    width: calc(87.3% + 30px);
+  }
+}
+@media (max-width: 768px) {
+  .descriptions {
+    display: block;
+  }
+  .descriptions img {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */
