@@ -286,9 +286,10 @@ li {
 }
 .product .box .content .price {
   margin-top: 8px;
+  margin-bottom: 8px !important;
 }
 .product .box .content .add-to-cart {
-  margin-top: 8px;
+  margin: 0 auto;
   width: 198px;
   height: 31px;
   border-radius: 20px;
@@ -306,10 +307,9 @@ li {
 
 .article .image-box {
   height: 255px;
-  padding: 0px 30px;
 }
 .article .image-box img {
-  border-radius: 60px;
+  border-radius: 30px;
 }
 .article .content .date-box {
   margin-top: 16px;
@@ -347,17 +347,23 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 91px;
+  height: 80px;
   background: #fff;
   z-index: 1000;
 }
 header .logo-page {
-  width: 83px;
-  height: 70px;
+  width: 65px;
+  height: 55px;
 }
 header .logo-page img {
   width: 100%;
   height: 100%;
+}
+header .nav-icon {
+  display: none;
+}
+header .navigation {
+  flex-direction: row;
 }
 header .navigation li {
   list-style: none;
@@ -366,6 +372,10 @@ header .navigation li {
 header .navigation li a {
   font-weight: 500;
   text-decoration: none;
+}
+header .navigation li img {
+  width: 30px;
+  height: 30px;
 }
 header .navigation li:first-child {
   margin-left: 0px;
@@ -378,9 +388,10 @@ header li.active a {
 }
 
 .banner-home {
-  margin-top: 91px;
-  height: calc(100vh - 91px);
+  position: relative;
+  margin-top: 80px;
   width: 100%;
+  height: calc(100vh - 80px);
 }
 .banner-home .banner-image {
   position: absolute;
@@ -405,19 +416,19 @@ header li.active a {
   right: 0px;
   z-index: -1;
 }
-.banner-home .phone {
-  position: absolute;
-  bottom: 110px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-}
+.banner-home .phone,
 .banner-home .message {
   position: absolute;
-  bottom: 45px;
   right: 30px;
   width: 50px;
   height: 50px;
+  cursor: pointer;
+}
+.banner-home .phone {
+  bottom: 110px;
+}
+.banner-home .message {
+  bottom: 45px;
 }
 .banner-home .button-left,
 .banner-home .button-right {
@@ -475,7 +486,7 @@ header li.active a {
   margin-top: 72px;
 }
 .capacity-home .capacity-container {
-  margin-top: 22px;
+  margin-top: 35px;
 }
 .capacity-home .capacity-container .title-capacity {
   font-weight: 500;
@@ -525,7 +536,7 @@ header li.active a {
   position: absolute;
   bottom: 30px;
   left: 30px;
-  width: 375;
+  width: 375px;
   height: 285px;
   z-index: 4;
 }
@@ -591,9 +602,11 @@ header li.active a {
 }
 .main-project-home .row .right-side .content .short-description:nth-child(2) {
   margin-top: 16px;
+  text-align: center;
 }
 .main-project-home .row .right-side .content .short-description:nth-child(3) {
   margin-top: 8px;
+  text-align: center;
 }
 .main-project-home .row .right-side .slider {
   margin-top: 28px;
@@ -662,6 +675,9 @@ footer .categories li {
   list-style: none;
   margin-bottom: 16px !important;
 }
+footer .image-res {
+  display: none;
+}
 
 .contact-page .left-side .address {
   margin-top: 16px;
@@ -722,8 +738,11 @@ footer .categories li {
 .products-page .categories .box li {
   list-style: none;
   margin-bottom: 18px !important;
+  align-items: flex-start;
 }
 .products-page .categories .box li img {
+  position: relative;
+  top: 5px;
   margin-right: 7px;
 }
 .products-page .categories .box li p {
@@ -763,7 +782,7 @@ footer .categories li {
 }
 .product-details .details .left-side .main-image {
   width: 100%;
-  height: 100%;
+  height: 370px;
 }
 .product-details .details .left-side .main-image img {
   width: 100%;
@@ -810,8 +829,11 @@ footer .categories li {
   height: 44px;
   border-radius: 20px;
   background: #6fac20;
-  padding: 0px 28px;
+  padding: 5px 28px;
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .product-details .details .right-side .container .button-green {
   left: 0;
@@ -821,23 +843,23 @@ footer .categories li {
 .product-details .more-information {
   margin-top: 35px;
 }
-.product-details .more-information .categories {
+.product-details .more-information .categories > div {
   display: flex;
   justify-content: space-between;
 }
-.product-details .more-information .categories .category {
+.product-details .more-information .categories > div .category {
   width: 20%;
 }
-.product-details .more-information .categories .category span {
+.product-details .more-information .categories > div .category span {
   font-weight: 500;
   text-transform: uppercase;
   cursor: pointer;
   padding-bottom: 3px;
 }
-.product-details .more-information .categories .category:last-child {
+.product-details .more-information .categories > div .category:last-child {
   text-align: right;
 }
-.product-details .more-information .categories .category.active span {
+.product-details .more-information .categories > div .category.active span {
   border-bottom: 2px solid #6fac20;
 }
 .product-details .more-information .box {
@@ -913,6 +935,9 @@ footer .categories li {
   height: 43px;
 }
 
+.introduce-page.mission .main-introduce {
+  overflow: hidden;
+}
 .introduce-page.mission .main-introduce .short-introduce {
   margin-top: 16px;
 }
@@ -932,16 +957,24 @@ footer .categories li {
   left: 50%;
   transform: translateX(-50%);
   margin-bottom: 16px;
+  width: 425px;
+  height: 445px;
 }
 .introduce-page.mission .main-introduce .introduces .introduce {
   width: 550px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .introduce-page.mission .main-introduce .introduces .introduce .introduce-title {
   font-size: 18px;
   font-weight: 500;
   text-align: center;
   color: #01cc9b;
+}
+.introduce-page.mission .main-introduce .introduces .introduce .icon {
+  display: none;
 }
 .introduce-page.mission .main-introduce .introduces .introduce .descriptions {
   margin-top: 10px;
@@ -968,6 +1001,9 @@ footer .categories li {
 .introduce-page.mission .main-introduce .introduces .introduce:nth-child(3) .introduce-title {
   color: #6fac20;
   text-align: left;
+}
+.introduce-page.mission .main-introduce .introduces .descriptions.res {
+  display: none;
 }
 
 .introduce-page.employee .main-introduce .descriptions {
@@ -1064,10 +1100,16 @@ footer .categories li {
   top: -17px;
   left: 5px;
 }
+.introduce-page.employee .main-introduce .introduces .year-box .year:nth-child(3) .circle-2 .circle-3 {
+  background: linear-gradient(270deg, #bbe900 -0.01%, #00d431 100%);
+}
 
 .introduce-page.diagram .main-introduce .image-box {
   width: 100%;
   margin-top: 36px;
+}
+.introduce-page.diagram .main-introduce .image-box .diagram-res {
+  display: none;
 }
 
 .introduce-page.field-of-activity .main-introduce .list > li {
@@ -1152,6 +1194,7 @@ footer .categories li {
   position: relative;
   border-radius: 30px;
   overflow: hidden;
+  height: 100%;
 }
 .introduce-page.project .main-introduce .projects .project .image-box .content {
   position: absolute;
@@ -1453,6 +1496,12 @@ footer .categories li {
   width: 145px;
   height: 125px;
   margin-right: 16px;
+}
+.cart-page .cart table tbody tr td:nth-child(2) > div .price {
+  display: none;
+}
+.cart-page .cart table tbody tr td:nth-child(2) > div .amount {
+  display: none;
 }
 .cart-page .cart table tbody tr td:nth-child(4) .amount {
   margin-top: 0px;
